@@ -1,4 +1,4 @@
-// Use this sample to create your own voice commands
+
 intent('hello world', p => {
     p.play('(hello|hi there)');
 });
@@ -19,6 +19,13 @@ intent('I want to go to $(LOC) on $(DATE)', p => {
      p.play(`${p.W.value}`);
  });
 
+ intent('Tell me the tourist attractions in Paris', p => {
+     p.play('If your new to the city, i would suggest you to visit the Louvre Musuem, the Eiffel tower(I heard its a really good romantic getaway for couples!!)');
+ });
+
+ intent('What kind of food do you recommend if i am visiting Mumbai?', p => {
+     p.play('Definitely try the vada pav here!!');
+ });
 intent('Say Good morning in Spanish', p => {
     p.play(voice('es'), 'Buenos dias');
 });
@@ -28,6 +35,14 @@ intent('Say Good morning in German', p => {
 });
  intent('What is the weather?', p => {
      p.play('The weather is the day-to-day state of the atmosphere');
+ });
+
+ intent('Tell me a tourist spot in Vellore', p => {
+     p.play('VIT vellore');
+ });
+
+ intent('What flights are available to Melborne Australia', p => {
+     p.play('Singapore Airlines FL1211, Emirates flight EK651 AND there are many more!!');
  });
 
  intent('(How is|What is) the weather today?', p => {
